@@ -1,0 +1,10 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+
+## Enable keyboard backlight on Sony laptop
+echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight
+## Disable bluetooth on boot
+rfkill block bluetooth
+exit 0

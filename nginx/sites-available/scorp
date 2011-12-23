@@ -1,0 +1,20 @@
+server {
+	listen   80; ## listen for ipv4; this line is default and implied
+
+	root /home/scorp/public_html;
+	index index.html index.htm;
+
+	server_name localhost;
+
+	location ~ \.php$ {
+		include fastcgi_params;
+		fastcgi_pass  127.0.0.1:9001;
+	}	
+
+	location / {
+		autoindex on;
+		index index.php;
+		try_files $uri $uri/ /index.php;
+	}
+
+}

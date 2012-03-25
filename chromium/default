@@ -1,0 +1,3 @@
+# Options to pass to chromium
+# --disk-cache-dir: Move Cache directory to /dev/shm
+CHROMIUM_FLAGS="--password-store=detect --disk-cache-dir=/dev/shm/$USER-chromium"

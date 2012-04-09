@@ -7,4 +7,6 @@
 echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight
 ## Disable bluetooth on boot
 rfkill block bluetooth
+## Disable 3G modem on boot
+rfkill block wwan
 exit 0

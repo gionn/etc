@@ -1,2 +1,2 @@
-event=video/brightnessdown BRTDN 00000087 00000000 
+event=sony/hotkey SNC 00000001 00000010
 action=/etc/acpi/nvidia_backlight_down.sh

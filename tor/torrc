@@ -1,0 +1,9 @@
+SocksPort 9050 # what port to open for local application connections
+SocksListenAddress 127.0.0.1 # accept connections only from localhost
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
+HiddenServicePort 22 127.0.0.1:22
+ORPort 9090
+RelayBandwidthRate 64 KBytes
+RelayBandwidthBurst 128 KBytes
+ExitPolicy reject *:* # no exits allowed

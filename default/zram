@@ -1,0 +1,13 @@
+###
+# zRAM module init script parameters:
+#
+#    ZRAM_NDEVS         Number of zram-backed swap drives to be created.
+#                       Recomended value: CPU_COUNT or CPU_COUNT-1.
+#
+#    ZRAM_USE_PERCENT   Maximum amount of phisical memory to be used for all
+#                       zram-backed swap drives.
+#                       Recomended value: 50 for large servers or 80-100 for low-ram laptops
+###
+
+# ZRAM_NDEVS=2
+# ZRAM_USE_PERCENT=75

@@ -31,7 +31,6 @@ start() {
     # if something goes wrong, assume we have 1
     [ "$num_cpus" != 0 ] || num_cpus=1
 
-    # set decremented number of CPUs
     decr_num_cpus=$((num_cpus - 1))
 
     # find module and it's param name
@@ -66,7 +65,7 @@ start() {
 	use_percent=$ZRAM_USE_PERCENT
     fi
 
-    zsize=$((100 * mem_total / num_cpus / use_percent))
+    zsize=$((use_percent * mem_total / num_cpus / 100))
 
     # initialize the devices
     for i in $(seq 0 $decr_num_cpus); do
